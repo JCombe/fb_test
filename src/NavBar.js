@@ -7,7 +7,7 @@ function NavBar() {
             <div className="text-white">Home</div>
             <div className="text-white">Profile</div>
             <div className="text-white">Messages</div>
-            <div className="text-red-600">Settings</div>
+            <div className="text-white">Settings</div>
         </div>
     )
 }
