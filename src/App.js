@@ -1,12 +1,21 @@
 import './App.css';
-import "./NavBar.js";
-import NavBar from './NavBar.js';
+import "./Components/NavBar.js";
+import NavBar from './Components/NavBar.js';
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
+import Home from "./Pages/Home.js"
+import Profile from "./Pages/Profile.js"
+
 
 function App() {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <Router>
+      <div className="container">
+        <Switch>
+          <Route path="/Home" component={Home} />
+          <Route path="/Profile" component={Profile} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
