@@ -12,12 +12,12 @@ import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useStateValue } from '../StateProvider';
 
 
 
 function NavBar() {
-
-    const [dotState, setDotState] = useState(false)
+    const [{ user }, dispatch] = useStateValue();
 
     return (
         <div className="navBar">
@@ -50,8 +50,8 @@ function NavBar() {
             </div>
             <div className="navBar__right">
                 <div className="navBar__info">
-                    <Avatar />
-                    <h4>Julian</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
                 <IconButton>
                     <AddIcon />

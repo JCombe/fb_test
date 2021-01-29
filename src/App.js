@@ -8,9 +8,10 @@ import SideBar from './SideBar.js';
 import Feed from "./Feed.js"
 import Widgets from './Components/Widgets';
 import Login from './Login';
+import { useStateValue } from './StateProvider';
 
 function App() {
-  const user = null;
+  const [{ user }, dispatch] = useStateValue();
 
   return (
 
@@ -30,6 +31,6 @@ function App() {
         )}
     </div>
   );
-}
+};
 
 export default App;
